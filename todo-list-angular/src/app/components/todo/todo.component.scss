@@ -1,0 +1,46 @@
+:host {
+    width: 100%;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: 1px solid black;
+    padding: 0 0 0 15px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &__input {
+        flex-grow: 1;
+        font-size: 16px;
+        padding: 10px 20px;
+        min-width: 1px;
+        border: none;
+    }
+
+    &.completed &__input:not(:focus) {
+        color: rgba(0, 0, 0, 0.5);
+        text-decoration: line-through;
+    }
+
+    &__delete-button {
+        padding: 10px 20px;
+
+        &:hover, &:focus {
+            color: white;
+            background: black;
+        }
+    }
+
+    &__radio {
+        height: 20px;
+        width: 20px;
+        margin: 0;
+        margin-right: 15px;
+
+        &:hover, &:focus {
+            cursor: pointer;
+        }
+    }
+}

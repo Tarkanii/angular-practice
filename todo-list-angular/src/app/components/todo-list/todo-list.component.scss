@@ -1,0 +1,10 @@
+:host {
+    width: 100%;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 20px;
+}

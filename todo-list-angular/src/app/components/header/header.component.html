@@ -1,0 +1,11 @@
+<header class="header">
+    <h1 class="header__title">Todo list</h1>
+    <input
+        class="header__input"
+        type="text"
+        placeholder="What needs to be done?"
+        [value]="text"
+        (keyup)="handleChange($event)"
+        (keyup.enter)="addTodo()"
+    />
+</header>

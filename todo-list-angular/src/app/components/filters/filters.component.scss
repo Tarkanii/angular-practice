@@ -1,0 +1,28 @@
+:host {
+    width: 100%;
+}
+
+.filters-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &__element__button {
+        text-transform: capitalize;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        &:hover, &:focus {
+            background: none;
+            border-color: black;
+        }
+        
+        &.selected {
+            color: white;
+            background: black;
+        }
+    }
+}

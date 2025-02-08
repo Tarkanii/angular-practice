@@ -1,0 +1,7 @@
+<ul class="todo-list">
+    @for (todo of visibleTodos(); track todo) {
+    <li class="todo-list__element">
+        <app-todo [todo]="todo"></app-todo>
+    </li>
+    }
+</ul>
