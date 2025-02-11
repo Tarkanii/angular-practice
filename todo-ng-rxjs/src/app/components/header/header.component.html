@@ -1,0 +1,27 @@
+<div class="header">
+  <h1 class="header__title">Todo List</h1>
+  <input
+    class="header__input"
+    type="text"
+    placeholder="What needs to be done?"
+    [value]="inputValue"
+    (keyup)="handleInputChange($event)"
+    (keyup.enter)="handleSubmit()"
+  />
+
+  @if ((todoList$ | async)?.length) {
+    <ul class="header__filters">
+      @for (filter of filters; track filter;) {
+        <li class="header__filters__item">
+          <button 
+            [ngClass]="{selected: filter === (filter$ | async)}" 
+            class="header__filters__button"
+            (click)="setFilter(filter)"
+          >
+            {{ filter }}
+          </button>
+        </li>
+      }
+    </ul>
+  }
+</div>

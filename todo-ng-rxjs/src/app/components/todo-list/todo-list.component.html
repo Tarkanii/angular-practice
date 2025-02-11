@@ -1,0 +1,9 @@
+@if ((todoList$ | async)?.length) {
+  <ul class="todo-list">
+    @for (todo of (todoList$ | async); track todo.id;) {
+      <li class="todo-list__item">
+        <app-todo-item [todo]="todo"></app-todo-item>
+      </li>
+    }
+  </ul>
+}

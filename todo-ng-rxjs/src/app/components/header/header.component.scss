@@ -1,0 +1,53 @@
+:host {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+
+    &__title {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    &__input {
+        font-size: 16px;
+        width: 100%;
+        min-width: 1;
+        max-width: 420px;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    &__filters {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__filters__button {
+      font-size: 16px;
+      text-transform: capitalize;
+      padding: 10px 15px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+
+      &:hover, &:focus {
+        background: none;
+        border-color: black;
+      }
+
+      &.selected {
+        color: white;
+        background-color: black;
+      }
+    }
+}

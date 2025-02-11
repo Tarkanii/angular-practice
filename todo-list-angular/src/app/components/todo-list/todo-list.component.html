@@ -1,5 +1,5 @@
 <ul class="todo-list">
-    @for (todo of visibleTodos(); track todo) {
+    @for (todo of visibleTodos(); track todo.id;) {
     <li class="todo-list__element">
         <app-todo [todo]="todo"></app-todo>
     </li>

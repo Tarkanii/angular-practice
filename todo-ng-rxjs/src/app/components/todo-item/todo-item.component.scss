@@ -1,0 +1,50 @@
+:host {
+  width: 100%;
+}
+
+.todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__checkbox {
+    height: 20px;
+    width: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__checkbox-container {
+    height: 100%;
+    padding: 0 10px 0 5px;
+  }
+
+  &__input {
+    font-size: 16px;
+    flex-grow: 1;
+    min-width: 1%;
+    padding: 10px 15px;
+    border: none;
+  }
+
+  &.completed &__input:not(:focus) {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+
+  &__delete-btn {
+    font-size: 16px;
+    padding: 10px 15px;
+
+    &:hover, &:focus {
+      color: white;
+      background-color: black;
+    }
+  }
+}
