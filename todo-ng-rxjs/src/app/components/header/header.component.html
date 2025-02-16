@@ -7,16 +7,18 @@
     [value]="inputValue"
     (keyup)="handleInputChange($event)"
     (keyup.enter)="handleSubmit()"
+    data-testid="headerInput"
   />
 
   @if ((todoList$ | async)?.length) {
-    <ul class="header__filters">
+    <ul class="header__filters" data-testid="headerFilters">
       @for (filter of filters; track filter;) {
         <li class="header__filters__item">
           <button 
             [ngClass]="{selected: filter === (filter$ | async)}" 
             class="header__filters__button"
             (click)="setFilter(filter)"
+            data-testid="headerFilterButton"
           >
             {{ filter }}
           </button>

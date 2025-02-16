@@ -1,7 +1,7 @@
 @if ((todoList$ | async)?.length) {
-  <ul class="todo-list">
+  <ul class="todo-list" data-testid="todoList">
     @for (todo of (todoList$ | async); track todo.id;) {
-      <li class="todo-list__item">
+      <li class="todo-list__item" data-testid="todoListItem">
         <app-todo-item [todo]="todo"></app-todo-item>
       </li>
     }
