@@ -1,10 +1,11 @@
 @if (renderFilters()) {
-<ul class="filters-list">
+<ul class="filters-list" data-testid="filtersList">
     @for (option of filterOptions; track option) {
     <li class="filters-list__element">
         <button
             class="filters-list__element__button"
             [ngClass]="{ selected: option === filtersSignal() }"
+            data-testid="filterButton"
             (click)="setFilter(option)"
         >
             {{ option }}

@@ -1,9 +1,14 @@
-<div class="todo" [ngClass]="{ completed: todo.isCompleted }">
+<div 
+    class="todo" 
+    [ngClass]="{ completed: todo.isCompleted }" 
+    data-testid="todo"
+>
     <input
         class="todo__radio"
         type="checkbox"
         [checked]="todo.isCompleted"
         (change)="toggleCompleted()"
+        data-testid="todoRadioButton"
     />
 
     <input
@@ -13,9 +18,15 @@
         (keyup)="handleChange($event)"
         (keyup.enter)="editTodo()"
         (blur)="editTodo()"
+        data-testid="todoInput"
     />
 
-    <button class="todo__delete-button" (click)="deleteTodo()" type="button">
+    <button 
+        class="todo__delete-button" 
+        (click)="deleteTodo()" 
+        type="button"
+        data-testid="todoDeleteButton"
+    >
         Delete
     </button>
 </div>
