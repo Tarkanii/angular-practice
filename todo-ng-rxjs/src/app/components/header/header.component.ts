@@ -20,8 +20,8 @@ export class HeaderComponent {
   public filters: string[] = Object.values(FilterEnums);
 
   constructor(private todoService: TodoService) {
-    this.todoList$ = this.todoService.getTodos();
-    this.filter$ = this.todoService.getFilter();
+    this.todoList$ = this.todoService.todoList$;
+    this.filter$ = this.todoService.filter$;
   }
 
   // Setting todo title as user types

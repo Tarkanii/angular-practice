@@ -83,7 +83,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/scss/styles.scss"],
             "scripts": []
           }
         }

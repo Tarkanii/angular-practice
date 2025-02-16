@@ -9,13 +9,8 @@ import { FilterEnums } from "../types/filters.enum";
 export class TodoService {
 
   // Observables for storing curent filter and todos
-  private todoList$: BehaviorSubject<ITodo[]> = new BehaviorSubject<ITodo[]>([]);
-  private filter$: BehaviorSubject<string> = new BehaviorSubject<string>(FilterEnums.all)
-  
-  // Getting todos
-  public getTodos(): Observable<ITodo[]> {
-    return this.todoList$;
-  }
+  public todoList$: BehaviorSubject<ITodo[]> = new BehaviorSubject<ITodo[]>([]);
+  public filter$: BehaviorSubject<string> = new BehaviorSubject<string>(FilterEnums.all)
 
   // Getting filtered todos
   public getFilteredTodos(): Observable<ITodo[]> {
@@ -63,12 +58,7 @@ export class TodoService {
     if (newTodoList.length === 0) this.setFilter(FilterEnums.all);
     this.todoList$.next(newTodoList);
   }
-
-  // Getting filter
-  public getFilter(): Observable<string> {
-    return this.filter$;
-  }
-
+  
   // Setting filter
   public setFilter(filter: string): void {
     this.filter$.next(filter);
